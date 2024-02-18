@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <script src="operations.js"></script>
+        <div class="main">
+
+            <div class="box">
+                <input type="text" class="value" value="0" id="box"></input>       
+            </div>
+
+            <div class="buttons">
+
+                <div class="left">
+                    <button class="rad" onclick="updateMode()" name="radBtn">Rad</button>
+                    <button disabled class="line"> |</button>
+                    <button class="deg" onclick="updateMode()" name="degButton" disabled>Deg</button>
+                    <button class="leftOperations" onclick="display('!')">x!</button>
+                    <button class="leftOperations" onclick="inv()">Inv</button>
+                    <button class="leftOperations" onclick="display('sin(')" id="sin">sin</button>
+                    <button class="leftOperations" onclick="display('ln(')" id="ln">ln</button>
+                    <button class="leftOperations" onclick="display('π')">π</button>
+                    <button class="leftOperations" onclick="display('cos(')" id="cos">cos</button>
+                    <button class="leftOperations" onclick="display('log(')" id="log">log</button>
+                    <button class="leftOperations" onclick="display('e')" id="e">e</button>
+                    <button class="leftOperations" onclick="display('tan(')" id="tan">tan</button>
+                    <button class="leftOperations" onclick="display('√')" id="rt">√</button>
+                    <button class="leftOperations" onclick="ans()"  id="ans">Ans</button>
+                    <button class="leftOperations" onclick="display('E')">EXP</button>
+                    <button class="leftOperations" onclick="display('^')" id="pow">x<sup>y</sup></button>   
+                </div>
+
+                <div class="mid">
+                    <button class="midMainOperations" onclick="display('(')">(</button>
+                    <button class="midMainOperations" onclick="display(')')">)</button>
+                    <button class="midMainOperations" onclick="display('%')">%</button>
+                    <button class="numbers" onclick="display(7)" >7</button>
+                    <button class="numbers" onclick="display(8)">8</button>
+                    <button class="numbers" onclick="display(9)">9</button>
+                    <button class="numbers" onclick="display(4)">4</button>
+                    <button class="numbers" onclick="display(5)">5</button>
+                    <button class="numbers" onclick="display(6)">6</button>
+                    <button class="numbers" onclick="display(1)">1</button>
+                    <button class="numbers" onclick="display(2)">2</button>
+                    <button class="numbers" onclick="display(3)">3</button>
+                    <button class="numbers" onclick="display(0)">0</button>
+                    <button class="numbers" onclick="display('.')">.</button>
+                    <button class="equal" onclick="eql()">=</button>    
+                </div>
+            
+                <div class="right">
+                    <button class="mainOperations" onmousedown="startLongPress()" onmouseup="endLongPress()">CE</button>
+                    <button class="mainOperations" onclick="display('÷')">÷</button>
+                    <button class="mainOperations" onclick="display('×')">×</button>
+                    <button class="mainOperations" onclick="display('-')">-</button>
+                    <button class="mainOperations" onclick="display('+')">+</button>   
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
